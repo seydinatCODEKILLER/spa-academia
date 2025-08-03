@@ -18,7 +18,7 @@ export default class LoginPage implements IBasePage {
   }
 
   private setupEventHandlers(): void {
-    this.view.bindLoginSubmit(this.handleLogin.bind(this));
+    this.view.bindLoginSubmit((data) => this.handleLogin(data));
     this.view.bindFieldValidation("email", (value) =>
       this.validateField("email", value)
     );
@@ -72,5 +72,6 @@ export default class LoginPage implements IBasePage {
       type: "error",
     });
   }
+
   cleanUp() {}
 }

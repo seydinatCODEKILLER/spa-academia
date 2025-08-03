@@ -7,7 +7,6 @@ import { routes } from "./routes.config.js";
 import { ROLE_PATHS } from "@config/route.constant.js";
 import { ILayoutPage } from "@core/interface/ILayout.js";
 import { RouteMatcher } from "./RouteMatcher.js";
-import { NavigationService } from "@infrastructure/navigation/NavigationService.js";
 
 export class Router {
   private static instance: Router;

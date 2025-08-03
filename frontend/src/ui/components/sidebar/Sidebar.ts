@@ -120,6 +120,7 @@ export class Sidebar {
     const a = document.createElement("a");
     a.href = link.path;
     a.className = "font-medium gap-3 flex items-center text-sm";
+    a.setAttribute("data-router-link", "");
     a.innerHTML = `
       <i class="${link.icon} text-lg"></i>
       <span>${link.text}</span>
@@ -163,7 +164,7 @@ export class Sidebar {
       <i class="ri-expand-up-down-line" tabindex="0" role="button"></i>
       <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-44 p-2 shadow-sm">
         <li>
-          <a href="#/profile" class="text-sm font-semibold border-b border-gray-100">
+          <a href="/profile" data-router-link class="text-sm font-semibold border-b border-gray-100">
             <i class="ri-settings-2-line font-medium"></i>
             <span>Mon compte</span>
           </a>

@@ -6,7 +6,7 @@ export class DefaultLayout implements ILayoutPage {
 
   render(): void {
     this.container.innerHTML = `
-      <div id="main-content" class="p-4">
+      <div id="main-content">
         <!-- Le contenu sera injecté ici -->
       </div>
     `;

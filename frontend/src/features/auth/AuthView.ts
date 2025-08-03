@@ -11,16 +11,15 @@ export class AuthView implements IAuthView {
 
   renderLogin(): string {
     this.container.innerHTML = `
-        <div class="h-screen flex bg-white">
-            <div class="w-1/2 hidden lg:block">
-            <img src=${APP_IMAGES.AUTH_BG} alt="" class="h-full object-cover" />
+      <div class="h-screen flex bg-white">
+        <div class="w-1/2 hidden lg:block">
+          <img src=${APP_IMAGES.AUTH_BG} alt="" class="h-full object-cover" />
         </div>
         <div class="flex-1 relative flex flex-col justify-center items-center gap-5 inset-0 bg-gradient-to-r from-indigo-50/50 to-white">
           ${this.authHeader()}
           ${this.loginForm()}
         </div>
-        </div>
-        `;
+      </div>`;
     this.cacheElements();
     return this.container.innerHTML;
   }
